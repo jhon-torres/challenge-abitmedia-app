@@ -71,6 +71,17 @@ Ejecutar el proyecto
 | `stock` | `numeric` | **Requerido**. Existencias del producto de software |
 | `sku` | `string` | **Requerido**. Identificador SKU del producto de software |
 
+JSON request
+```bash
+{
+  "description" : "Ofimática",
+  "price": 10,
+  "os": "Windows",
+  "stock": 20,
+  "sku":"ofimaticaW"
+}
+```
+
 #### Actualizar un producto de software
 ```http
   PUT /api/software/${id}
@@ -83,6 +94,17 @@ Ejecutar el proyecto
 | `os` | `string` | **Requerido**. Nombre del Sistema operativo |
 | `stock` | `numeric` | **Requerido**. Existencias del producto de software |
 | `sku` | `string` | **Requerido**. Identificador SKU del producto de software |
+
+JSON request
+```bash
+{
+  "description" : "Ofimática",
+  "price": 10,
+  "os": "Windows",
+  "stock": 20,
+  "sku":"ofimaticaW"
+}
+```
 
 #### Eliminar un producto de software
 ```http
@@ -108,6 +130,15 @@ Ejecutar el proyecto
 | `price` | `numeric` | **Requerido**. Precio del servicio |
 | `sku` | `string` | **Requerido**. Identificador SKU del servicio |
 
+JSON request
+```bash
+{
+  "description" : "Formateo de computadoras",
+  "price": 25,
+  "sku":"formateoDC"
+}
+```
+
 #### Actualizar un producto de software
 ```http
   PUT /api/service/${id}
@@ -118,6 +149,15 @@ Ejecutar el proyecto
 | `description` | `string` | **Requerido**. Nombre del servicio |
 | `price` | `numeric` | **Requerido**. Precio del servicio |
 | `sku` | `string` | **Requerido**. Identificador SKU del servicio |
+
+JSON request
+```bash
+{
+  "description" : "Formateo de computadoras",
+  "price": 25,
+  "sku":"formateoDC"
+}
+```
 
 #### Eliminar un producto de software
 ```http
