@@ -15,7 +15,20 @@ class SoftwareController extends Controller
     public function index()
     {
         $allSoftware = Software::all();
-        return $allSoftware;
+        $data = [];
+
+        foreach ($allSoftware as $software) {
+            $license = License::where('product_id', $software->id)->first();
+
+            $structure = [
+                'software' => $software,
+                'license' => $license->serial,
+            ];
+
+            array_push($data, $structure);
+
+        }
+        return $data;
     }
 
     /**
