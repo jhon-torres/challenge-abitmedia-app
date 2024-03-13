@@ -21,7 +21,7 @@ return new class extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->string('serial', 100);
+            $table->string('serial', 100)->unique();
 
             $table->timestamps();
         });

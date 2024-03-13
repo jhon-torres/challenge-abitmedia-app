@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SoftwareController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// muestra todos los registros
+Route::get('/software', [SoftwareController::class, 'index']);
+
+// crear un registro
+Route::post('/software', [SoftwareController::class, 'store']);
+
+// actualizar registro
+Route::put('/software/{id}', [SoftwareController::class, 'update']);
+
+// eliminar un registro
+Route::delete('/software/{id}', [SoftwareController::class, 'destroy']);
