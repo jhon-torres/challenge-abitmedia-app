@@ -31,7 +31,7 @@ class SoftwareController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(),[
+        $validator = Validator::make($request->all(), [
             'description' => 'required|string',
             'price' => 'required|numeric',
             'os' => 'required|string',
@@ -39,7 +39,7 @@ class SoftwareController extends Controller
             'sku' => 'required|string|max:10|unique:software'
         ]);
 
-        if($validator->fails()){
+        if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()], 422);
         }
 
@@ -72,7 +72,7 @@ class SoftwareController extends Controller
         // se valida si ya existe el serial en la BD
         $licenseFound = License::where('serial', $serial)->first();
 
-        while($licenseFound != null){
+        while ($licenseFound != null) {
             $serial = generate_string($permitted_chars, 100);
             $licenseFound = License::where('serial', $serial)->first();
         }
@@ -106,7 +106,7 @@ class SoftwareController extends Controller
      */
     public function update(Request $request)
     {
-        $validator = Validator::make($request->all(),[
+        $validator = Validator::make($request->all(), [
             'description' => 'string',
             'price' => 'numeric',
             'os' => 'string',
@@ -114,7 +114,7 @@ class SoftwareController extends Controller
             'sku' => 'string|max:10'
         ]);
 
-        if($validator->fails()){
+        if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()], 422);
         }
 
@@ -135,7 +135,7 @@ class SoftwareController extends Controller
      */
     public function destroy(Request $request)
     {
-        $software = Software::destroy($request->id);
+        Software::destroy($request->id);
         return response()->json(['message' => 'Successfully removed software']);
     }
 }
