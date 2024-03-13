@@ -28,6 +28,14 @@ caracteres, ingresado manualmente.
 </details>
 
 <details>
+<summary>Visita el Despliegue del proyecto</summary>
+    
+[Documentación en PostMan](https://app.getpostman.com/join-team?invite_code=1eaf4e4a47f0aec6f7830e24b5722978&target_code=41ed96a356da168c158657e112c0a1ee)
+    
+[Despliegue del proyecto Laravel](https://challenge-abitmedia-app-production.up.railway.app)
+</details>
+
+<details>
 <summary>Instalación Local</summary>
 
 Clonar o descargar [ZIP](https://github.com/jhon-torres/challenge-abitmedia-app/archive/refs/heads/master.zip)
