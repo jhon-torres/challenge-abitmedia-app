@@ -50,6 +50,9 @@ Ejecutar el proyecto
 ```
 </details>
 
+## Diseño de BDD
+[Diagrama de Base de Datos](https://dbdiagram.io/d/Copy-of-DB-products-and-services-Abitmedia-65f1be42b1f3d4062cd6fc96)
+
 ## Descripción de APIs
 ### Productos de Software
 #### Obtener todos los productos de software
