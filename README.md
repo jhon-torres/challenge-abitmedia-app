@@ -1,4 +1,4 @@
-<p align="center"><a href="https://abitmedia.cloud/" target="_blank"><img style="backgroud:black" src="https://abitmedia.cloud/wp-content/uploads/2023/03/1-Logo-Abitmedia-SVG.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a style="backgroud:black" href="https://abitmedia.cloud/" target="_blank"><img src="https://abitmedia.cloud/wp-content/uploads/2023/03/1-Logo-Abitmedia-SVG.svg" width="400" alt="Laravel Logo"></a></p>
 
 ## Acerca este proyecto
 
