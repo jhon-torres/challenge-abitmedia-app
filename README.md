@@ -1,6 +1,6 @@
 <p align="center"><a style="backgroud:black" href="https://abitmedia.cloud/" target="_blank"><img src="https://abitmedia.cloud/wp-content/uploads/2023/03/1-Logo-Abitmedia-SVG.svg" width="400" alt="Abitmedia Logo"></a></p>
 
-## Acerca este proyecto
+## Acerca de este proyecto
 
 <details>
 <summary>Información relevante</summary>
