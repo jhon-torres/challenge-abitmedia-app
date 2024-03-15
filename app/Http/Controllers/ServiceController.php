@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class ServiceController extends Controller
@@ -42,6 +43,9 @@ class ServiceController extends Controller
 
         $service = new Service();
 
+        $user = Auth::user(); // Obtener la instancia del modelo de usuario actualmente autenticado
+
+        $service->user_id = $user->id;
         $service->description = $request->description;
         $service->price = $request->price;
         $service->sku = $request->sku;

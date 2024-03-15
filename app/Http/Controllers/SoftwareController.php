@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Software;
 use App\Models\License;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class SoftwareController extends Controller
@@ -58,6 +59,9 @@ class SoftwareController extends Controller
 
         $software = new Software();
 
+        $user = Auth::user(); // Obtener la instancia del modelo de usuario actualmente autenticado
+
+        $software->user_id = $user->id;
         $software->description = $request->description;
         $software->price = $request->price;
         $software->os = $request->os;
