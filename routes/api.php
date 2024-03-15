@@ -35,6 +35,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
 */
     // muestra todos los servicios
     Route::get('/service', [ServiceController::class, 'index']);
+    // muestra un servicio en especifico
+    Route::get('/service/{id}', [ServiceController::class, 'show']);
     // crear un registro de servicios
     Route::post('/service', [ServiceController::class, 'store']);
     // actualizar registro de servicios
@@ -49,6 +51,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
 */
     // muestra todos los productos de software
     Route::get('/software', [SoftwareController::class, 'index']);
+    // muestra un software en especifico
+    Route::get('/software/{id}', [SoftwareController::class, 'show']);
     // crear un registro de software
     Route::post('/software', [SoftwareController::class, 'store']);
     // actualizar registro de software

@@ -59,7 +59,9 @@ class ServiceController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $serviceFound = Service::where('id', $id)->first();
+
+        return $serviceFound;
     }
 
     /**

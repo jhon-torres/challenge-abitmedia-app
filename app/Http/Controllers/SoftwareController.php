@@ -107,7 +107,16 @@ class SoftwareController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $softwareFound = Software::where('id', $id)->first();
+
+        $license = License::where('product_id', $softwareFound->id)->first();
+
+            $data = [
+                'software' => $softwareFound,
+                'license' => $license->serial,
+            ];
+
+        return $data;
     }
 
     /**
