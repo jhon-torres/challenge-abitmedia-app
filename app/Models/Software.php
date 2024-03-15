@@ -14,4 +14,9 @@ class Software extends Model
     {
         return $this->hasOne(License::class);
     }
+
+    public function user ()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

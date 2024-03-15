@@ -23,6 +23,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function software ()
+    {
+        return $this->hasMany('App\Models\Software');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
