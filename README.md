@@ -61,14 +61,48 @@ Ejecutar el proyecto
 </details>
 
 ## Diseño de BDD
-[Diagrama de Base de Datos](https://dbdiagram.io/d/Copy-of-DB-products-and-services-Abitmedia-65f1be42b1f3d4062cd6fc96)
+[Diagrama de Base de Datos](https://dbdiagram.io/d/Copy-of-Copy-of-DB-products-and-services-Abitmedia-65f4ba51ae072629ce239d5a)
 
 ## Descripción de APIs
+### ➡️ Autenticación de usuario
+#### Inicio de sesión
+```http
+  POST /api/login
+```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `email` | `string` | **Requerido**. Email del usuario |
+| `password` | `string` | **Requerido**. Contraseña del usuario |
+
+JSON request
+```bash
+{
+  "email" : "user@user.com",
+  "password" : "password"
+}
+```
+
+#### Cierre de sesión
+```http
+  POST /api/logout
+```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `token` | `Bearer` | **Requerido**. Token generado por el inicio de sesión |
+
+
 ### ➡️ Productos de Software
 #### Obtener todos los productos de software
 ```http
   GET /api/software
 ```
+#### Obtener un producto de software específico
+```http
+  GET /api/software/${id}
+```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `numeric` | **Requerido**. ID del producto de software específico a buscar |
 #### Crear un producto de software
 ```http
   POST /api/software
@@ -130,6 +164,13 @@ JSON request
 ```http
   GET /api/service
 ```
+#### Obtener un servicio en específico
+```http
+  GET /api/service/${id}
+```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `numeric` | **Requerido**. ID del servicio a buscar |
 #### Crear un servicio
 ```http
   POST /api/service
@@ -149,7 +190,7 @@ JSON request
 }
 ```
 
-#### Actualizar un producto de software
+#### Actualizar un servicio
 ```http
   PUT /api/service/${id}
 ```
@@ -169,7 +210,7 @@ JSON request
 }
 ```
 
-#### Eliminar un producto de software
+#### Eliminar un servicio
 ```http
   DELETE /api/service/${id}
 ```
